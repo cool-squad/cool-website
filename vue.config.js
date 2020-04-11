@@ -21,6 +21,15 @@ module.exports = {
     //     },
     //   },
   },
+
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [require('postcss-px2rem')({ remUnit: 192 })],
+      },
+    },
+  },
+
   configureWebpack: {
     resolve: {
       alias: {
@@ -31,7 +40,7 @@ module.exports = {
 
   chainWebpack: (config) => {
     config.plugin('html').tap((args) => {
-      args[0].title = 'web-template';
+      args[0].title = 'cool-squad';
       return args;
     });
 

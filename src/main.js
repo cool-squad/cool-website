@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import axios from './libs/api';
+import 'amfe-flexible';
 import './assets/icons';
 import '@/assets/styles/vendors-extensions/_element.scss';
 

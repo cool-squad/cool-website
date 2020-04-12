@@ -22,26 +22,29 @@
     <el-container class="box">
       <el-row class="title">Architecture</el-row>
       <el-container class="arch-container">
-        <el-col :span="12">
-          <svg-icon icon-class="p2"
-                    class="p1" />
-        </el-col>
-        <el-col :span="12"
-                class="arch-title">
-          Similar to conventional databases, Cool organizes data records
-          intables. Each table is maintained by a user-defined schema,
-          consisting of multiple columns called fields or dimensions. A
-          dimension file recording the hierarchy of several dimensions is
-          also given by the users in order to support cube queries. Each
-          dimension of the table is bound to a field type describing the
-          format of the values. The primitive types include varied-length
-          integer, float, string, boolean, time and event. The first four are
-          similar to underlying database types while the remaining types
-          are specifically defined by Cool. Time deals with the timestamps
-          of the records and event is a particular string representing user
-          actions or behaviors. A dimension tree is constructed in systems
-          etup guided by the dimension file and persisted in storage.
-        </el-col>
+        <el-row :gutter="20">
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <svg-icon icon-class="p2"
+                      class="p1" />
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <el-col class="arch-title">
+              Similar to conventional databases, Cool organizes data records
+              intables. Each table is maintained by a user-defined schema,
+              consisting of multiple columns called fields or dimensions. A
+              dimension file recording the hierarchy of several dimensions is
+              also given by the users in order to support cube queries. Each
+              dimension of the table is bound to a field type describing the
+              format of the values. The primitive types include varied-length
+              integer, float, string, boolean, time and event. The first four are
+              similar to underlying database types while the remaining types
+              are specifically defined by Cool. Time deals with the timestamps
+              of the records and event is a particular string representing user
+              actions or behaviors. A dimension tree is constructed in systems
+              etup guided by the dimension file and persisted in storage.
+            </el-col>
+          </el-col>
+        </el-row>
       </el-container>
     </el-container>
     <el-container class="box">
@@ -77,12 +80,14 @@
                   class="icon2" />
       </el-row>
       <el-container class="code-container">
-        <el-col>
-          <svg-icon icon-class="code1" />
-        </el-col>
-        <el-col>
-          <svg-icon icon-class="code2" />
-        </el-col>
+        <el-row :gutter="20">
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <svg-icon icon-class="code1" />
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <svg-icon icon-class="code2" />
+          </el-col>
+        </el-row>
       </el-container>
     </el-container>
     <el-container class="box demo">

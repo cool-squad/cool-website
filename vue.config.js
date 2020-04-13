@@ -8,24 +8,15 @@ module.exports = {
   publicPath: './',
   outputDir: 'dist',
   devServer: {
-    // TODO: Change the comments to English.
-    open: true, // 是否自动弹出浏览器页面
-    https: false, // 是否使用https协议
-    hotOnly: true, // 是否开启热更新
-    // proxy: {
-    //     '/api': {
-    //       target: 'http://192.168.2.100:9087',
-    //       changeOrigin: true,
-    //       pathRewrite: {
-    //         '^/api': '/',
-    //       },
-    //     },
-    //   },
+    open: true, // Automatically pop up the browser page
+    https: false, // Do not use https protocol
+    hotOnly: true, // Open hot update
   },
 
   css: {
     loaderOptions: {
       postcss: {
+        // eslint-disable-next-line global-require
         plugins: [require('postcss-px2rem')({ remUnit: 192 })],
       },
     },
@@ -55,7 +46,7 @@ module.exports = {
         symbolId: 'icon-[name]',
       });
 
-    // scss 预处理
+    // set pre-scss
     const oneOfsMap = config.module.rule('scss').oneOfs.store;
     oneOfsMap.forEach((item) => {
       item

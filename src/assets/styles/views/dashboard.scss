@@ -1,5 +1,6 @@
 .main {
   text-align: left;
+  font-size: 24px;
   color: #333;
   @include flex-column;
 }
@@ -10,15 +11,17 @@
 }
 
 .top-container {
-  height: 740px;
   background: $primary-color;
-  display: flex;
-  align-items: center;
-  padding: 0 260px;
+  padding: 93px 260px;
+
+  .el-row {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .logo {
-  @include set-size(60px);
+  @include set-size(70px);
   float: left;
 }
 
@@ -35,15 +38,19 @@
 }
 
 .p1 {
-  width: 100%;
-  height: 554px;
+  @include set-size(605px, 554px);
+  margin-left: 80px;
+}
+
+.p2,
+.p3 {
+  @include set-size(100%);
 }
 
 .box {
   margin-top: 200px;
   @include flex-column;
   align-items: center;
-  // height: 716px;
 }
 
 .title {
@@ -54,12 +61,21 @@
 
 .arch-container {
   @include box-center;
+
+  .el-col {
+    height: 624px;
+  }
+
+  .arch-img {
+    padding: 0 80px 0 180px !important;
+    margin-bottom: 30px;
+  }
 }
 
 .arch-title {
   font-size: 18px;
   background: #c6e2ff;
-  padding: 150px 250px 150px 100px;
+  padding: 150px 250px 150px 100px !important;
 }
 
 .storage-desc {
@@ -72,6 +88,7 @@
 .storage-content {
   width: 100%;
   padding: 0 260px;
+  height: 437px;
 }
 
 .query-box {
@@ -91,6 +108,7 @@
   color: #eee;
   font-size: 18px;
   margin-bottom: 150px;
+  padding: 0 192px;
 }
 
 .query-container {
@@ -134,21 +152,24 @@
 }
 
 .code-container {
-  height: 520px;
+  .el-row {
+    width: 100%;
+  }
 
-  .el-col {
-    width: 680px;
+  .code-img {
     background: #fff;
     box-shadow: 0 0 50px 26px rgba(0, 0, 0, 0.02);
+    margin-bottom: 20px;
+    margin: 0 20px;
 
-    &:first-child {
+    &.code-img-1 {
       padding: 110px 37px;
-      margin-right: 20px;
+      height: 300px;
     }
 
-    &:nth-child(2) {
+    &.code-img-2 {
       padding: 40px 155px;
-      margin-left: 20px;
+      height: 440px;
     }
   }
 
@@ -163,23 +184,15 @@
 
 .img-content {
   @include set-size(1400px, 700px);
-
-  img {
-    @include set-size(100%);
-  }
 }
 
 .footer {
-  height: 340px;
   background: $primary-color;
   font-size: 24px;
   color: #fff;
+  padding: 80px 120px 40px 120px;
 
   .el-row {
-    &:first-child {
-      margin-top: 80px;
-    }
-
     &:nth-child(2) {
       margin-bottom: 80px;
     }
@@ -195,5 +208,67 @@
       font-size: 14px;
       opacity: 0.6;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title,
+  .example-title,
+  .query-title {
+    font-size: 0.3rem;
+  }
+
+  .storage-desc,
+  .example,
+  .demo {
+    padding: 0 0.5rem;
+  }
+
+  .header {
+    padding-left: 0.5rem;
+  }
+
+  .logo {
+    @include set-size(1rem, 0.8rem);
+  }
+
+  .top-container {
+    padding: 0.5rem;
+  }
+
+  .arch-container {
+    .el-col:nth-child(2) {
+      height: 3rem;
+    }
+    .arch-img {
+      padding: 0 !important;
+      height: 6rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .arch-title {
+      padding: 0.6rem 0.5rem !important;
+      font-size: 0.16rem;
+    }
+  }
+
+  .code-container {
+    .code-img {
+      height: 4rem;
+
+      &.code-img-1 {
+        margin: 0 0 0.2rem 0;
+        height: 100%;
+      }
+
+      &.code-img-2 {
+        margin: auto 0;
+        height: 100%;
+      }
+    }
+  }
+
+  .img-content {
+    @include set-size(9rem, 4rem);
   }
 }

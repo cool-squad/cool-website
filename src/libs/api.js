@@ -3,7 +3,7 @@ import url from './config';
 
 axios.defaults.baseURL = url.localUrl;
 
-// 拦截器
+// global config
 axios.interceptors.request.use((req) => {
   req.headers.Authorization = '';
   return req;

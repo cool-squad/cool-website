@@ -5,43 +5,51 @@
                 class="logo" />
     </div>
     <el-container class="top-container">
-      <el-col>
-        <el-row class="top-title">Cool: a COhort OnLine analytical processing system</el-row>
-        <el-row class="sub-top-title">Cool is an online cohort analytical processing system that
-          supports various types of data analytics, including cubequery,
-          ice-berg query and cohort query. The objective of Cool is to
-          provide high performance (near real-time) analytical response
-          for emerging data warehouse domain.
-        </el-row>
-      </el-col>
-      <el-col>
-        <svg-icon icon-class="p1"
-                  class="p1" />
-      </el-col>
+      <el-row :gutter="30">
+        <el-col :span="12">
+          <el-row class="top-title">Cool: a COhort OnLine analytical processing system</el-row>
+          <el-row class="sub-top-title">Cool is an online cohort analytical processing system that
+            supports various types of data analytics, including cubequery,
+            ice-berg query and cohort query. The objective of Cool is to
+            provide high performance (near real-time) analytical response
+            for emerging data warehouse domain.
+          </el-row>
+        </el-col>
+        <el-col :span="12">
+          <svg-icon icon-class="p1"
+                    class="p1" />
+        </el-col>
+      </el-row>
     </el-container>
     <el-container class="box">
       <el-row class="title">Architecture</el-row>
       <el-container class="arch-container">
-        <el-col :span="12">
-          <svg-icon icon-class="p2"
-                    class="p1" />
-        </el-col>
-        <el-col :span="12"
-                class="arch-title">
-          Similar to conventional databases, Cool organizes data records
-          intables. Each table is maintained by a user-defined schema,
-          consisting of multiple columns called fields or dimensions. A
-          dimension file recording the hierarchy of several dimensions is
-          also given by the users in order to support cube queries. Each
-          dimension of the table is bound to a field type describing the
-          format of the values. The primitive types include varied-length
-          integer, float, string, boolean, time and event. The first four are
-          similar to underlying database types while the remaining types
-          are specifically defined by Cool. Time deals with the timestamps
-          of the records and event is a particular string representing user
-          actions or behaviors. A dimension tree is constructed in systems
-          etup guided by the dimension file and persisted in storage.
-        </el-col>
+        <el-row :gutter="20">
+          <el-col :xs="24"
+                  :sm="12"
+                  class="arch-img">
+            <svg-icon icon-class="p2"
+                      class="p2" />
+          </el-col>
+          <el-col :xs="24"
+                  :sm="12">
+            <el-col class="arch-title">
+              Similar to conventional databases, Cool organizes data records
+              intables. Each table is maintained by a user-defined schema,
+              consisting of multiple columns called fields or dimensions. A
+              dimension file recording the hierarchy of several dimensions is
+              also given by the users in order to support cube queries. Each
+              dimension of the table is bound to a field type describing the
+              format of the values. The primitive types include varied-length
+              integer, float, string, boolean, time and event. The first four are
+              similar to underlying database types while the remaining types
+              are specifically defined by Cool. Time deals with the timestamps
+              of the records and event is a particular string representing user
+              actions or behaviors. A dimension tree is constructed in systems
+              etup guided by the dimension file and persisted in storage.
+            </el-col>
+          </el-col>
+        </el-row>
       </el-container>
     </el-container>
     <el-container class="box">
@@ -53,7 +61,7 @@
       </el-row>
       <el-row class="storage-content">
         <svg-icon icon-class="p3"
-                  class="p1" />
+                  class="p3" />
       </el-row>
     </el-container>
     <el-container class="box query-box">
@@ -77,12 +85,20 @@
                   class="icon2" />
       </el-row>
       <el-container class="code-container">
-        <el-col>
-          <svg-icon icon-class="code1" />
-        </el-col>
-        <el-col>
-          <svg-icon icon-class="code2" />
-        </el-col>
+        <el-row>
+          <el-col :xs="24"
+                  :sm="12">
+            <div class="code-img code-img-1">
+              <svg-icon icon-class="code1" />
+            </div>
+          </el-col>
+          <el-col :xs="24"
+                  :sm="12">
+            <div class="code-img code-img-2">
+              <svg-icon icon-class="code2" />
+            </div>
+          </el-col>
+        </el-row>
       </el-container>
     </el-container>
     <el-container class="box demo">
@@ -95,7 +111,12 @@
       </el-row>
       <el-row class="img-content">
         <!-- TODO: Make the following video box responsive. -->
-        <iframe class="video" src="https://www.youtube-nocookie.com/embed/r28_jBD9qKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/r28_jBD9qKg"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width: 100%; height:100%">
+        </iframe>
       </el-row>
     </el-container>
     <el-container class="box footer">

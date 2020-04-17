@@ -24,7 +24,7 @@
     <el-container class="box">
       <el-row class="title">Architecture</el-row>
       <el-container class="arch-container">
-        <el-row :gutter="20">
+        <el-row :gutter="20" class="arch-wrapper">
           <el-col :xs="24"
                   :sm="12"
                   class="arch-img">
@@ -112,6 +112,21 @@
       <el-row class="img-content">
         <!-- TODO: Make the following video box responsive. -->
         <iframe src="https://www.youtube-nocookie.com/embed/r28_jBD9qKg"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width: 100%; height:100%">
+        </iframe>
+      </el-row>
+    </el-container>
+    <el-container class="box demo">
+      <el-row class="title"> ICDE 2020 Presentation on COOL</el-row>
+      <el-row class="storage-desc">
+        our icde presentation
+      </el-row>
+      <el-row class="img-content">
+        <!-- TODO: Make the following video box responsive. -->
+        <iframe :src="require('@/assets/videos/557_ICDE_Xie.mp4')"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen

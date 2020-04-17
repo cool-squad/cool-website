@@ -62,8 +62,15 @@
 .arch-container {
   @include box-center;
 
+  .arch-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    align-items: stretch;
+    max-width: 100vw;
+  }
+
   .el-col {
-    height: 624px;
+    height: auto;
   }
 
   .arch-img {
@@ -215,6 +222,20 @@
   .title,
   .example-title,
   .query-title {
+    font-size: 0.5rem;
+  }
+
+  .top-title {
+    font-size: 0.4rem;
+  }
+
+  .sub-top-title,
+  .arch-title,
+  .storage-desc,
+  .query-desc,
+  .storage-desc,
+  .query-container,
+  .footer {
     font-size: 0.3rem;
   }
 
@@ -238,7 +259,7 @@
 
   .arch-container {
     .el-col:nth-child(2) {
-      height: 3rem;
+      height: auto;
     }
     .arch-img {
       padding: 0 !important;
@@ -248,8 +269,11 @@
 
     .arch-title {
       padding: 0.6rem 0.5rem !important;
-      font-size: 0.16rem;
     }
+  }
+
+  .query-container {
+    width: 1700px;
   }
 
   .code-container {

@@ -7,7 +7,11 @@ function resolve(dir) {
 module.exports = {
   // publicPath: './',
   publicPath: process.env.NODE_ENV === 'production' ? './' : './',
+<<<<<<< HEAD
   outputDir: process.env.NODE_ENV === 'production' ? 'doc' : 'dist',
+=======
+  outputDir: process.env.NODE_ENV === 'production' ? 'docs' : 'dist',
+>>>>>>> a0fc472... #7 Add CI and Fix path issues
   // outputDir: 'dist',
   devServer: {
     open: true, // Automatically pop up the browser page

@@ -5,7 +5,8 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath: './',
+  // publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? '/cool-website' : './',
   outputDir: 'dist',
   devServer: {
     open: true, // Automatically pop up the browser page

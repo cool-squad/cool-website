@@ -7,7 +7,8 @@ function resolve(dir) {
 module.exports = {
   // publicPath: './',
   publicPath: process.env.NODE_ENV === 'production' ? '/cool-website' : './',
-  outputDir: 'dist',
+  outputDir: process.env.NODE_ENV === 'production' ? 'doc' : 'dist',
+  // outputDir: 'dist',
   devServer: {
     open: true, // Automatically pop up the browser page
     https: false, // Do not use https protocol

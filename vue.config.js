@@ -5,8 +5,10 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath: './',
-  outputDir: 'dist',
+  // publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? '/cool-website' : './',
+  outputDir: process.env.NODE_ENV === 'production' ? 'doc' : 'dist',
+  // outputDir: 'dist',
   devServer: {
     open: true, // Automatically pop up the browser page
     https: false, // Do not use https protocol

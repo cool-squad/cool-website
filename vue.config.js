@@ -6,7 +6,7 @@ function resolve(dir) {
 
 module.exports = {
   // publicPath: './',
-  publicPath: process.env.NODE_ENV === 'production' ? '/cool-website' : './',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : './',
   outputDir: process.env.NODE_ENV === 'production' ? 'doc' : 'dist',
   // outputDir: 'dist',
   devServer: {

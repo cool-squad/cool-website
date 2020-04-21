@@ -218,6 +218,26 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .top-title {
+    font-size: 30px;
+  }
+
+  .sub-top-title,
+  .arch-title,
+  .storage-desc,
+  .query-desc,
+  .storage-desc,
+  .query-container,
+  .footer {
+    font-size: 16px;
+  }
+
+  .logo {
+    @include set-size(130px);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .title,
   .example-title,
@@ -250,7 +270,7 @@
   }
 
   .logo {
-    @include set-size(1rem, 0.8rem);
+    @include set-size(2rem, 1.6rem);
   }
 
   .top-container {
@@ -268,7 +288,7 @@
     }
 
     .arch-title {
-      padding: 0.6rem 0.5rem !important;
+      padding: 0.6rem 0.5rem;
     }
   }
 

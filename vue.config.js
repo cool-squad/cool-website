@@ -8,6 +8,7 @@ module.exports = {
   // publicPath: './',
   publicPath: process.env.NODE_ENV === 'production' ? './' : './',
   outputDir: process.env.NODE_ENV === 'production' ? 'doc' : 'dist',
+
   // outputDir: 'dist',
   devServer: {
     open: true, // Automatically pop up the browser page
@@ -25,6 +26,9 @@ module.exports = {
   },
 
   configureWebpack: {
+    externals: {
+      vue: 'Vue',
+    },
     resolve: {
       alias: {
         '@': resolve('src'),

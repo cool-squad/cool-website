@@ -29,6 +29,9 @@ module.exports = {
   },
 
   configureWebpack: {
+    externals: {
+      vue: 'Vue',
+    },
     resolve: {
       alias: {
         '@': resolve('src'),

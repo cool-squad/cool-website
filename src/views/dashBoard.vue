@@ -24,7 +24,8 @@
     <el-container class="box">
       <el-row class="title">Architecture</el-row>
       <el-container class="arch-container">
-        <el-row :gutter="20" class="arch-wrapper">
+        <el-row :gutter="20"
+                class="arch-wrapper">
           <el-col :xs="24"
                   :sm="12"
                   class="arch-img">

@@ -1,19 +1,15 @@
 import Vue from 'vue';
-import ElementUI from 'element-ui';
 import App from './App.vue';
 import router from './router';
-import store from './store';
-import axios from './libs/api';
+import element from './plugins/elementImport';
 import 'amfe-flexible';
 import './assets/icons';
 import '@/assets/styles/vendors-extensions/_element.scss';
 
 Vue.config.productionTip = false;
-Vue.use(ElementUI);
-Vue.prototype.$axios = axios;
+Vue.use(element);
 
 new Vue({
   router,
-  store,
   render: (h) => h(App),
 }).$mount('#app');
